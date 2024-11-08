@@ -1,9 +1,18 @@
 package csYa_ronny;
 
+import javax.swing.*;
+import java.util.Arrays;
+
 public class AnagramChecker {
     public static boolean areAnagrams(String str1, String str2) {
-        // TODO: Implement the logic to check if str1 and str2 are anagrams
-        return false;  // Return false by default
+       char[]arr=str1.toCharArray();
+       char[]arr1=str2.toCharArray();
+      Arrays.sort(arr);
+      Arrays.sort(arr1);
+      if (Arrays.equals(arr,arr1))
+          return true;
+      else
+        return false;
     }
 
     public static void main(String[] args) {
